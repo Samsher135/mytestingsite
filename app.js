@@ -80,10 +80,11 @@ const Testing = new mongoose.model('Mydata', testingSchema);
 
 app.post('/passenger', (req, res, next) => {
   var name = req.body.name;
+  var roll = req.body.roll;
 
   const updateDocument = async () => {
     try {
-      const result = await Testing.findOneAndUpdate({_id: "60265c07bfbec70d381ca246"}, {name : name},{new : true});
+      const result = await Testing.findOneAndUpdate({_id: "60265c07bfbec70d381ca246"}, {name : name, Roll_no : roll},{new : true});
       console.log(result);
     } catch (err) {
       console.log(err);
