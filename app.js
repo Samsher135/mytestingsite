@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const express = require('express');
 const path = require('path');
+const port = process.env.PORT || 3000 ;
 
 
 mongoose.connect("mongodb+srv://All_users_25:test@cluster0.mjn0g.mongodb.net/test?retryWrites=true&w=majority", { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true, useFindAndModify: false })
@@ -112,8 +113,8 @@ app.post('/passenger', (req, res, next) => {
 
 // }
 
-app.listen(5000, () => {
-  console.log("server started");
+app.listen(port, () => {
+  console.log(`listening to ${port}`);
 })
 
 //updateDocument("60265c07bfbec70d381ca246");
