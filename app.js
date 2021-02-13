@@ -92,7 +92,7 @@ app.post('/passenger', (req, res, next) => {
 
   }
   updateDocument();
-  res.render('/passenger');
+  res.render('passenger.hbs');
 });
 
 // const updateDocument = async () => {
